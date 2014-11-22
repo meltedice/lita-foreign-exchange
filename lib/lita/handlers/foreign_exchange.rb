@@ -19,13 +19,14 @@ module Lita
       private
 
       def get_foreign_exchange_data(symbol)
+        # FIXME is this OK?
         resp = http.get("https://www.google.com/finance?q=#{symbol}&infotype=infoquoteall")
         raise 'RequestFail' unless resp.status == 200
         parse_foreign_exchange_data(symbol, resp.body)
       end
 
       def parse_foreign_exchange_data(symbol, body)
-        value = body.match(%r{<span class=bld>(.*)</span>})[1]
+        value = body.match(%r{<span class=bld>(.*)</span>})[1] # FIXME
         rate, to = value.split(' ')
         {
           rate_s: rate,
