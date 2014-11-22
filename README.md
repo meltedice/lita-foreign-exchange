@@ -1,23 +1,25 @@
 # lita-foreign-exchange
 
-TODO: Add a description of the plugin.
+Lita handler plugin to fetch Foreign Exchange Rate.
 
 ## Installation
 
 Add lita-foreign-exchange to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-foreign-exchange"
+gem "lita-foreign-exchange", git: "git@github.com:meltedice/lita-foreign-exchange.git"
 ```
 
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+No configurations are available.
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+``` bash
+Lita> ex USDJPY
+```
 
 ## License
 
