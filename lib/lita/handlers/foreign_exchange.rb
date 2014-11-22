@@ -3,7 +3,7 @@ module Lita
     class ForeignExchange < Handler
       # Almost copy&paste from https://github.com/webdestroya/lita-stocks/blob/master/lib/lita/handlers/stocks.rb
 
-      route %r{^ex ([\w .-_]+)$}i, :foreign_exchange_info, help: {
+      route %r{^ex +([A-Za-z]{6})$}i, :foreign_exchange_info, help: {
         "ex <symbol>" => "Returns foreign exchange rate information about the provided ex symbol. ex) USDJPY"
       }
 
